@@ -2,7 +2,7 @@
 # Makefile Options
 # ----------------------------
 
-NAME = ZCSE
+NAME = NNE
 DESCRIPTION = "Ti83+ and 84+ emulator for the CE"
 COMPRESSED = NO
 ARCHIVED = NO

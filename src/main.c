@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#ifdef PC
-#include <sys/types.h>
-#endif
 #include "inc.h"
 #include "z80.h"
 
@@ -11,7 +8,7 @@
 
 
 typedef struct {
-    uint8_t mem[65536];
+    uint8_t mem[16384];
 	uint8_t screen[768];
     uint8_t bank_a, bank_b, bank_c;
     uint8_t screen_x, screen_y;
@@ -54,7 +51,6 @@ void send_screen_data(calculator *calc_io, uint8_t data) {
 		}
 
     }
-    screen_update();
     if (calc_io->screen_dir == 4) calc_io->screen_y--;
     if (calc_io->screen_dir == 5) calc_io->screen_y++;
     if (calc_io->screen_dir == 6) calc_io->screen_x--;
@@ -130,7 +126,7 @@ void out(z80 *z, uint8_t port, uint8_t data) {
 
 int sys_init(z80 *calc, calculator *calc_io) {
    
-    if (sdl_init()) {
+    if (graphics_init()) {
 	return 1;
     }
 
@@ -144,7 +140,7 @@ int sys_init(z80 *calc, calculator *calc_io) {
 }
 
 void sys_exit() {
-    sdl_exit();
+    graphics_exit();
 }
 
 int main(void) {
@@ -156,26 +152,10 @@ int main(void) {
         return 1;
     }
 
-    screen_update();
     memcpy(calc_io.mem, test_program, sizeof(test_program));
-	#ifdef PC
-	SDL_Event e;
-
-    while (1) {
-		while (SDL_PollEvent(&e)) {
-			if (e.type == SDL_QUIT) {
-			sys_exit();
-			return 0;
-			}
-		}
-
-	z80_step(&calc);
-	}
-	#else
 	while (!os_GetCSC()) {
 		z80_step(&calc);
 	}
-	#endif
 
     sys_exit();
     return 0;

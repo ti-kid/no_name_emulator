@@ -1,0 +1,433 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/linux/ez80/CEdev/lib/crt/libcrt.a(idivu.o)
+                              obj/NNE.o (__idivu)
+/home/linux/ez80/CEdev/lib/crt/libcrt.a(idvrmu.o)
+                              /home/linux/ez80/CEdev/lib/crt/libcrt.a(idivu.o) (__idvrmu)
+
+Discarded input sections
+
+ .init.weak_crt
+                0x00000000       0x10 obj/NNE.o
+ .comment       0x00000000      0x2a0 obj/NNE.o
+ .text          0x00000000        0x0 obj/crt0.o
+ .data          0x00000000        0x0 obj/crt0.o
+ .bss           0x00000000        0x0 obj/crt0.o
+ .data          0x00000000        0x0 /home/linux/ez80/CEdev/lib/crt/libcrt.a(idivu.o)
+ .bss           0x00000000        0x0 /home/linux/ez80/CEdev/lib/crt/libcrt.a(idivu.o)
+ .data          0x00000000        0x0 /home/linux/ez80/CEdev/lib/crt/libcrt.a(idvrmu.o)
+ .bss           0x00000000        0x0 /home/linux/ez80/CEdev/lib/crt/libcrt.a(idvrmu.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+prgm             0x00d1a87f         0x00400000
+bss              0x00d052c6         0x0000ed12
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00d1a87f                        LOAD_ADDR = 0xd1a87f
+                0x00d052c6                        BSSHEAP_LOW = 0xd052c6
+                0x00d13fd8                        BSSHEAP_HIGH = 0xd13fd8
+                0x00d1a87e                        STACK_HIGH = 0xd1a87e
+                0x00000001                        __TICE__ = 0x1
+                0x00d1a87f                        . = LOAD_ADDR
+
+.header         0x00d1a87f       0x2a
+ *(.header)
+ .header        0x00d1a87f        0x3 obj/crt0.o
+ *(.header.icon)
+ .header.icon   0x00d1a882       0x27 obj/NNE.o
+                0x00d1a887                ___description
+
+.init           0x00d1a8a9      0x101
+ *(.init)
+ .init          0x00d1a8a9      0x101 obj/crt0.o
+                0x00d1a8a9                __start
+                0x00d1a906                __libload_library_FILEIOC
+                0x00d1a910                _ti_Write
+                0x00d1a914                _ti_PutC
+                0x00d1a918                __libload_library_GRAPHX
+                0x00d1a921                _gfx_Begin
+                0x00d1a925                _gfx_End
+                0x00d1a929                _gfx_SetColor
+                0x00d1a92d                _gfx_FillScreen
+                0x00d1a931                _gfx_SetPixel
+                0x00d1a96e                ___exithl
+                0x00d1a96e                _exit
+                0x00d1a96f                _exit.sp
+
+.text           0x00d1a9aa     0x631f
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(SORT_BY_NAME(.text.sorted.*))
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00d1a9aa      0x41c obj/NNE.o
+                0x00d1a9aa                __land
+                0x00d1a9ae                __iand
+                0x00d1a9c5                __bbitrev
+                0x00d1a9d9                __bdivu
+                0x00d1a9e3                __bdvrmu
+                0x00d1a9e4                __bdvrmu.hijack_l_dividend
+                0x00d1a9f2                __bshl
+                0x00d1a9fb                __bshru
+                0x00d1aa05                __frameset
+                0x00d1aa13                __frameset0
+                0x00d1aa1e                __ftod
+                0x00d1aa66                __imuls
+                0x00d1aa66                __imulu
+                0x00d1aa96                __indcallhl
+                0x00d1aa97                __inot
+                0x00d1aa97                __snot
+                0x00d1aaa1                __sshl
+                0x00d1aaa1                __ishl
+                0x00d1aac7                __ishru
+                0x00d1aacc                __ishrs
+                0x00d1ab08                __ladd
+                0x00d1ab0e                __lladd
+                0x00d1ab32                __lland
+                0x00d1ab6e                __llcmps
+                0x00d1ab9b                __llcmpu
+                0x00d1abc5                __llcmpzero
+                0x00d1abc5                __llequzero
+                0x00d1abda                __lldivu
+                0x00d1abee                __lldvrmu
+                0x00d1abf5                __lldvrmu.hijack
+                0x00d1ac4c                __llmuls
+                0x00d1ac4c                __llmulu
+                0x00d1aca1                __llshl
+                0x00d1acbb                __llshru
+                0x00d1acd1                __llshrs
+                0x00d1ad09                __llxor
+                0x00d1ad45                __lor
+                0x00d1ad49                __ior
+                0x00d1ad60                __sand
+                0x00d1ad69                __setflag
+                0x00d1ad73                __sor
+                0x00d1ad7c                __sshru
+                0x00d1ad89                __lxor
+                0x00d1ad8d                __ixor
+                0x00d1ada4                _outchar
+                0x00d1adba                _putchar
+ .text._unplot  0x00d1adc6       0x96 obj/NNE.o
+                0x00d1adc6                _unplot
+ .text._plot    0x00d1ae5c       0x95 obj/NNE.o
+                0x00d1ae5c                _plot
+ .text._graphics_init
+                0x00d1aef1       0x30 obj/NNE.o
+                0x00d1aef1                _graphics_init
+ .text._graphics_exit
+                0x00d1af21        0x4 obj/NNE.o
+                0x00d1af21                _graphics_exit
+ .text._send_screen_mode
+                0x00d1af25       0x67 obj/NNE.o
+                0x00d1af25                _send_screen_mode
+ .text._send_screen_data
+                0x00d1af8c      0x16e obj/NNE.o
+                0x00d1af8c                _send_screen_data
+ .text._get_screen_data
+                0x00d1b0fa      0x124 obj/NNE.o
+                0x00d1b0fa                _get_screen_data
+ .text._zread   0x00d1b21e       0x15 obj/NNE.o
+                0x00d1b21e                _zread
+ .text._zwrite  0x00d1b233       0x18 obj/NNE.o
+                0x00d1b233                _zwrite
+ .text._in      0x00d1b24b       0x5d obj/NNE.o
+                0x00d1b24b                _in
+ .text._out     0x00d1b2a8       0x3c obj/NNE.o
+                0x00d1b2a8                _out
+ .text._sys_init
+                0x00d1b2e4       0x48 obj/NNE.o
+                0x00d1b2e4                _sys_init
+ .text._main    0x00d1b32c       0xc9 obj/NNE.o
+                0x00d1b32c                _main
+ .text._z80_init
+                0x00d1b3f5       0x65 obj/NNE.o
+                0x00d1b3f5                _z80_init
+ .text._z80_step
+                0x00d1b45a      0x187 obj/NNE.o
+                0x00d1b45a                _z80_step
+ .text._exec_opcode
+                0x00d1b5e1     0x1d4e obj/NNE.o
+ .text._nextb   0x00d1d32f       0x25 obj/NNE.o
+ .text._call    0x00d1d354       0x28 obj/NNE.o
+ .text._rw      0x00d1d37c       0x57 obj/NNE.o
+ .text._pushw   0x00d1d3d3       0x26 obj/NNE.o
+ .text._ww      0x00d1d3f9       0x59 obj/NNE.o
+ .text._nextw   0x00d1d452       0x24 obj/NNE.o
+ .text._addb    0x00d1d476       0xe3 obj/NNE.o
+ .text._subb    0x00d1d559       0x3d obj/NNE.o
+ .text._addhl   0x00d1d596       0x55 obj/NNE.o
+ .text._inc     0x00d1d5eb       0x43 obj/NNE.o
+ .text._dec     0x00d1d62e       0x43 obj/NNE.o
+ .text._land    0x00d1d671       0x79 obj/NNE.o
+ .text._lxor    0x00d1d6ea       0x75 obj/NNE.o
+ .text._lor     0x00d1d75f       0x75 obj/NNE.o
+ .text._cp      0x00d1d7d4       0x4a obj/NNE.o
+ .text._cond_jump
+                0x00d1d81e       0x25 obj/NNE.o
+ .text._cond_jr
+                0x00d1d843       0x54 obj/NNE.o
+ .text._cond_call
+                0x00d1d897       0x5b obj/NNE.o
+ .text._ret     0x00d1d8f2       0x1f obj/NNE.o
+ .text._cond_ret
+                0x00d1d911       0x3a obj/NNE.o
+ .text._popw    0x00d1d94b       0x24 obj/NNE.o
+ .text._exec_opcode_ddfd
+                0x00d1d96f      0xec0 obj/NNE.o
+ .text._addw    0x00d1e82f       0x91 obj/NNE.o
+ .text._parity  0x00d1e8c0       0x55 obj/NNE.o
+ .text._cb_rlc  0x00d1e915       0x7b obj/NNE.o
+ .text._cb_rrc  0x00d1e990       0x6b obj/NNE.o
+ .text._cb_rl   0x00d1e9fb       0x7a obj/NNE.o
+ .text._cb_rr   0x00d1ea75       0x76 obj/NNE.o
+ .text._cb_sla  0x00d1eaeb       0x73 obj/NNE.o
+ .text._cb_sra  0x00d1eb5e       0x76 obj/NNE.o
+ .text._cb_sll  0x00d1ebd4       0x63 obj/NNE.o
+ .text._cb_srl  0x00d1ec37       0x64 obj/NNE.o
+ .text._cb_bit  0x00d1ec9b       0x84 obj/NNE.o
+ .text._ldi     0x00d1ed1f       0xc7 obj/NNE.o
+ .text._ldd     0x00d1ede6       0x42 obj/NNE.o
+ .text._cpi     0x00d1ee28       0xcc obj/NNE.o
+ .text._cpd     0x00d1eef4       0x39 obj/NNE.o
+ .text._in_r_c  0x00d1ef2d       0x82 obj/NNE.o
+ .text._ini     0x00d1efaf       0xa0 obj/NNE.o
+ .text._ind     0x00d1f04f       0x40 obj/NNE.o
+ .text._outi    0x00d1f08f       0xa0 obj/NNE.o
+ .text._outd    0x00d1f12f       0x40 obj/NNE.o
+ .text._sbchl   0x00d1f16f       0xd6 obj/NNE.o
+ .text._adchl   0x00d1f245       0x73 obj/NNE.o
+ .text._addiz   0x00d1f2b8       0x4e obj/NNE.o
+ .text._npf_vpprintf
+                0x00d1f306     0x16c4 obj/NNE.o
+                0x00d1f306                _npf_vpprintf
+ .text._NPF_PUTC_IMPL
+                0x00d209ca       0x2d obj/NNE.o
+ .text._npf_utoa_rev
+                0x00d209f7       0xe5 obj/NNE.o
+ .text._npf_fputc_std
+                0x00d20adc       0x16 obj/NNE.o
+ .text._fprintf
+                0x00d20af2       0x29 obj/NNE.o
+                0x00d20af2                _fprintf
+ .text.__bctlz  0x00d20b1b       0x22 obj/NNE.o
+                0x00d20b1b                __bctlz
+ .text.__sctlz  0x00d20b3d        0xc obj/NNE.o
+                0x00d20b3d                __sctlz
+ .text.__ictlz  0x00d20b49       0x12 obj/NNE.o
+                0x00d20b49                __ictlz
+ .text.__llctlz
+                0x00d20b5b        0xe obj/NNE.o
+                0x00d20b5b                __llctlz
+ .text.__i48ctlz
+                0x00d20b69       0x15 obj/NNE.o
+                0x00d20b69                __i48ctlz
+ .text._fputc   0x00d20b7e       0x73 obj/NNE.o
+                0x00d20b7e                _putc
+                0x00d20b7e                _fputc
+ .text._fwrite  0x00d20bf1       0xb6 obj/NNE.o
+                0x00d20bf1                _fwrite
+ .text          0x00d20ca7        0x8 /home/linux/ez80/CEdev/lib/crt/libcrt.a(idivu.o)
+                0x00d20ca7                __idivu
+ .text          0x00d20caf       0x1a /home/linux/ez80/CEdev/lib/crt/libcrt.a(idvrmu.o)
+                0x00d20caf                __idvrmu
+                0x00d20cb3                __idvrmu.hijack_a_iters_ude_dividend
+ *(.gnu.warning)
+
+.rodata         0x00d20cc9      0xb6f
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata._send_screen_data
+                0x00d20cc9        0xc obj/NNE.o
+ .rodata._in    0x00d20cd5        0xc obj/NNE.o
+ .rodata._out   0x00d20ce1        0xc obj/NNE.o
+ .rodata._.str  0x00d20ced       0x15 obj/NNE.o
+ .rodata._exec_opcode
+                0x00d20d02      0x44d obj/NNE.o
+ .rodata._exec_opcode_ddfd
+                0x00d2114f      0x29a obj/NNE.o
+ .rodata._.str.2
+                0x00d213e9       0x23 obj/NNE.o
+ .rodata._cyc_00
+                0x00d2140c      0x100 obj/NNE.o
+ .rodata._cyc_ed
+                0x00d2150c      0x100 obj/NNE.o
+ .rodata._.str.4
+                0x00d2160c       0x19 obj/NNE.o
+ .rodata._cyc_ddfd
+                0x00d21625      0x100 obj/NNE.o
+ .rodata._npf_vpprintf
+                0x00d21725       0xed obj/NNE.o
+ .rodata._.str.1
+                0x00d21812        0x4 obj/NNE.o
+ .rodata.libload
+                0x00d21816       0x22 obj/crt0.o
+
+.init_array     0x00d21838        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(.preinit_array)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00d21838        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x00d21838                        ___data_low = .
+
+.data           0x00d21838       0x2f
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data._test_program
+                0x00d21838       0x2f obj/NNE.o
+                0x00d21838                _test_program
+ *(.data1)
+                0x00d21867                        ___runprgm_reloc_start = .
+ *(.runprgm.reloc)
+                0x00d21867                        ___runprgm_reloc_end = .
+                0x00d21867                        ___data_high = .
+                0x0000002f                        ___data_len = (___data_high - ___data_low)
+                0x00d052c6                        . = BSSHEAP_LOW
+                0x00d052c6                        ___bss_low = .
+
+.bss            0x00d052c6        0x9
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss._pc_cnt.0
+                0x00d052c6        0x3 obj/NNE.o
+ .bss._pc_cnt.1
+                0x00d052c9        0x3 obj/NNE.o
+ .bss._pc_cnt.2
+                0x00d052cc        0x3 obj/NNE.o
+ *(COMMON)
+                0x00d052cf                        ___bss_high = .
+                0x00000009                        ___bss_len = (___bss_high - ___bss_low)
+                0x00000001                        ASSERT ((. <= BSSHEAP_HIGH), Error: BSS exceed BSSHEAP_HIGH limit)
+                0x00d052cf                        ___heap_low = .
+                0x00d13fd8                        . = BSSHEAP_HIGH
+                0x00d13fd8                        ___heap_high = .
+
+.runprgm
+ *(.runprgm.reloc)
+
+.debug_info
+ *(.debug_info .debug_info.*)
+
+.debug_abbrev
+ *(.debug_abbrev .debug_abbrev.*)
+
+.debug_line
+ *(.debug_line .debug_line.*)
+
+.debug_line_str
+ *(.debug_line_str .debug_line_str.*)
+
+.debug_str
+ *(.debug_str .debug_str.*)
+
+.debug_str_offsets
+ *(.debug_str_offsets .debug_str_offsets.*)
+
+.debug_addr
+ *(.debug_addr .debug_addr.*)
+
+.debug_aranges
+ *(.debug_aranges .debug_aranges.*)
+
+.debug_ranges
+ *(.debug_ranges .debug_ranges.*)
+
+.debug_rnglists
+ *(.debug_rnglists .debug_rnglists.*)
+
+.debug_loc
+ *(.debug_loc .debug_loc.*)
+
+.debug_loclists
+ *(.debug_loclists .debug_loclists.*)
+
+.debug_frame
+ *(.debug_frame .debug_frame.*)
+
+.debug_macro
+ *(.debug_macro .debug_macro.*)
+
+.debug_macinfo
+ *(.debug_macinfo .debug_macinfo.*)
+
+.debug_names
+ *(.debug_names .debug_names.*)
+
+.debug_pubnames
+ *(.debug_pubnames .debug_pubnames.*)
+
+.debug_pubtypes
+ *(.debug_pubtypes .debug_pubtypes.*)
+
+.debug_types
+ *(.debug_types .debug_types.*)
+
+.debug_sup
+ *(.debug_sup .debug_sup.*)
+
+.debug_cu_index
+ *(.debug_cu_index .debug_cu_index.*)
+
+.debug_tu_index
+ *(.debug_tu_index .debug_tu_index.*)
+
+.gdb_index
+ *(.gdb_index)
+
+.debug_gdb_scripts
+ *(.debug_gdb_scripts)
+
+.debug_abbrev.dwo
+ *(.debug_abbrev.dwo .debug_abbrev.dwo.*)
+
+.debug_info.dwo
+ *(.debug_info.dwo .debug_info.dwo.*)
+
+.debug_line.dwo
+ *(.debug_line.dwo .debug_line.dwo.*)
+
+.debug_loclists.dwo
+ *(.debug_loclists.dwo .debug_loclists.dwo.*)
+
+.debug_macro.dwo
+ *(.debug_macro.dwo .debug_macro.dwo.*)
+
+.debug_rnglists.dwo
+ *(.debug_rnglists.dwo .debug_rnglists.dwo.*)
+
+.debug_str.dwo
+ *(.debug_str.dwo .debug_str.dwo.*)
+
+.debug_str_offsets.dwo
+ *(.debug_str_offsets.dwo .debug_str_offsets.dwo.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+/DISCARD/
+ *(.comment)
+ *(.note*)
+                [!provide]                        PROVIDE (___runprgm_reloc_len = (___runprgm_reloc_end - ___runprgm_reloc_start))
+LOAD obj/NNE.o
+LOAD obj/crt0.o
+LOAD /home/linux/ez80/CEdev/lib/libc/allocator_standard.a
+START GROUP
+LOAD /home/linux/ez80/CEdev/lib/softfloat/libsoftfloat.a
+LOAD /home/linux/ez80/CEdev/lib/crt/libcrt.a
+END GROUP
+LOAD /home/linux/ez80/CEdev/lib/libc/libc_os.a
+LOAD /home/linux/ez80/CEdev/lib/libcxx/libcxx.a
+LOAD /home/linux/ez80/CEdev/lib/ce/libce.a
+OUTPUT(bin/NNE.obj elf32-z80)
